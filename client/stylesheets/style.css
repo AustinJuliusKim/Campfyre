@@ -8,18 +8,67 @@
     box-sizing: border-box;
 }
 
+/*fonts*/
+@font-face {
+    font-family: openSans;
+    src: url(http://fonts.googleapis.com/css?family=Open+Sans);
+}
+
+/*universal*/
+* {
+    font-family: openSans, sans-serif;
+    transition: all 300ms ease-out;
+}
+
+.center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*welcome-page*/
 #welcome-bg {
     background: url(http://i.imgur.com/jUFg7jn.jpg) no-repeat center center fixed;
-    background-color: #464646;
+    background-color: #1E5394;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
+    position: fixed;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    position:fixed;
     top: 0;
     left: 0;
+}
+
+#login-form, #signup-form {
+    margin-top: 200px;
+    min-width: 300px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#login-form h1, #signup-form h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#login-form #login-username, #login-form button[type="submit"],
+#signup-form #signup-username, #signup-form button[type="submit"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+}
+
+#login-form #login-password, #login-form #signup-button,
+#signup-form #signup-password, #signup-form #back-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#login-form button[type="submit"], #login-form #signup-button,
+#signup-form button[type="submit"], #signup-form #back-button {
+    width: 100%;
 }

@@ -10,3 +10,5 @@ insecure
 twbs:bootstrap
 underscore
 iron:router
+accounts-base
+accounts-password
