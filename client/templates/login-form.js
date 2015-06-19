@@ -9,6 +9,7 @@ Template.loginForm.events({
                 console.log("Unable to log in with credentials. Reason: " + error.reason);
             } else {
                 console.log("User '" + username + "' has logged in successfully.");
+                Router.go('chat');
             }
         });
     },

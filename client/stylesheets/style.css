@@ -26,6 +26,25 @@
     align-items: center;
 }
 
+.vertical-flex {
+    display: flex;
+    flex-flow: column;
+    -webkit-flex-flow: column;
+}
+
+.horizontal-flex {
+    display: flex;
+    flex-flow: row;
+    -webkit-flex-flow: row;
+}
+
+.screen-container {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
 /*welcome-page*/
 #welcome-bg {
     background: url(http://i.imgur.com/jUFg7jn.jpg) no-repeat center center fixed;
@@ -70,5 +89,38 @@
 
 #login-form button[type="submit"], #login-form #signup-button,
 #signup-form button[type="submit"], #signup-form #back-button {
+    width: 100%;
+}
+
+/*chat*/
+#left-panel, #right-panel {
+    background-color: #EDF5F8;
+    flex: 0 0 19%;
+}
+
+#left-panel, #chat, #right-panel {
+    padding: 0;
+    height: 100vh;
+}
+
+#chat {
+    flex: 0 1 62%;
+}
+
+#chat #display {
+    flex: 1 1 auto;
+    padding-bottom: 80px;
+}
+
+#chat #input-panel {
+    flex: 0 0 80px;
+    background-color: red;
+    padding: 20px;
+}
+
+#chat #input-box {
+    border: 2px solid rgba(60, 60, 60, 0.2);
+    border-radius: 4px;
+    height: 40px;
     width: 100%;
 }
