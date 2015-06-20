@@ -1,19 +1,23 @@
 <template name="chat">
-    <div class="screen-container horizontal-flex">
-        <div class="vertical-flex" id="left-panel">
-            <div id="groups-panel">
-                {{#each groups}}
-                    {{> groupItem}}
-                {{/each}}
+    <div id="chat">
+        <div class="horizontal-flex">
+            <div class="vertical-flex" id="left-panel">
+                <div id="groups-panel">
+                    {{#each groups}}
+                        {{> groupItem}}
+                    {{/each}}
+                </div>
+                <div id="temp-panel">temp panel</div>
             </div>
-            <div id="temp-panel">temp panel</div>
-        </div>
-        <div class="vertical-flex" id="chat">
-            <div id="display">display</div>
-            <div id="input-panel">
-                <input type="text" id="input-box"/>
+            <div class="vertical-flex" id="middle-panel">
+                <div id="display">
+                    {{>yield}}
+                </div>
+                <div id="input-panel">
+                    <input type="text" id="input-box"/>
+                </div>
             </div>
+            <div id="right-panel">social</div>
         </div>
-        <div id="right-panel">social</div>
     </div>
 </template>
