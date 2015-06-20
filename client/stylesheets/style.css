@@ -60,10 +60,7 @@
 
 /*header*/
 nav {
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    flex: 0 0 50px;
 }
 
 /*welcome-page*/
@@ -115,9 +112,7 @@ nav {
 
 /*chat*/
 #chat {
-    width: 100%;
-    height: 100vh;
-    padding-top: 50px;
+    flex: auto;
 }
 
 #left-panel, #right-panel {
@@ -125,10 +120,6 @@ nav {
     background-color: #4E555D;
     padding: 10px;
     font-size: 20px;
-}
-
-#left-panel, #middle-panel, #right-panel {
-    height: 100vh;
 }
 
 #middle-panel {
@@ -156,7 +147,7 @@ nav {
 
 /*left-panel*/
 #left-panel #groups-panel, #left-panel #temp-panel {
-    flex: 0 1 50%;
+    flex: 1;
     margin: 10px;
     padding: 10px;
 

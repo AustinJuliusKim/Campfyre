@@ -1,13 +1,12 @@
 <template name="layout">
-    <div id="main">
+    <div class="vertical-flex" id="main">
         {{>header}}
-        <div id="content">
-            {{#if currentUser}}
-                {{>chat}}
-            {{else}}
-                {{>welcome}}
-            {{/if}}
-        </div>
+
+        {{#if currentUser}}
+            {{>chat}}
+        {{else}}
+            {{>welcome}}
+        {{/if}}
     </div>
 </template>
 
