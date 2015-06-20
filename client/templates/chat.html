@@ -1,7 +1,12 @@
 <template name="chat">
     <div class="screen-container horizontal-flex">
-        <div id="left-panel">
-            space
+        <div class="vertical-flex" id="left-panel">
+            <div id="groups-panel">
+                {{#each groups}}
+                    {{> groupItem}}
+                {{/each}}
+            </div>
+            <div id="temp-panel">temp panel</div>
         </div>
         <div class="vertical-flex" id="chat">
             <div id="display">display</div>
