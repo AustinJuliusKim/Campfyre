@@ -1,3 +1,5 @@
 <template name="messageItem">
-     <h1> Hey</h1>
+     {{#each messages}}
+     		{{> message}}
+     {{/each}}
 </template>

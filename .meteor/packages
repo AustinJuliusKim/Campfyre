@@ -11,3 +11,4 @@ iron:router
 accounts-base
 accounts-password
 sacha:spin
+insecure

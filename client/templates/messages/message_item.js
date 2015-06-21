@@ -1,3 +1,5 @@
 Template.messageItem.helpers({
-    content: this.content
+    messages: function(){
+    	return Messages.find({}, {sort: {submitted: -1}});
+    }
 });
