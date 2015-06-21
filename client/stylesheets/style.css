@@ -19,6 +19,11 @@
     src: url(/fonts/OpenSans-Regular.ttf);
 }
 
+@font-face {
+    font-family: Michroma;
+    src: url(/fonts/Michroma.ttf);
+}
+
 /*universal*/
 * {
     font-family: OpenSans, sans-serif;
@@ -61,6 +66,29 @@
 /*header*/
 nav {
     flex: 0 0 50px;
+    background-color: #8C4646;
+    position: relative;
+}
+
+a#logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -93px;
+    width: 187px;
+    height: 42px;
+
+    font-family: Michroma;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+#logo-span {
+    color: #F2E394;
+}
+
+a#logo:hover {
+    text-decoration: none;
 }
 
 /*welcome-page*/
@@ -134,7 +162,6 @@ nav {
 
 #middle-panel #input-panel {
     flex: 0 0 80px;
-    background-color: red;
     padding: 20px;
 }
 
