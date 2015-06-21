@@ -16,7 +16,7 @@ Template.chat.events({
         inputElement.value = '';
 
         //save message in session
-        Session.set(contextId, content);
+        //Session.set(contextId, content);
 
         var msg = {
             context: context.name,
