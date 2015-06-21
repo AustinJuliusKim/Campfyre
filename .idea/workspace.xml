@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4bf5192-3b6e-4c2d-bbb1-f06f3dc244e9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/chat.js" afterPath="$PROJECT_DIR$/client/templates/chat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/groups/group_item.html" afterPath="$PROJECT_DIR$/client/templates/groups/group_item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/messages/message_item.html" afterPath="$PROJECT_DIR$/client/templates/messages/message_item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/collections/messages.js" afterPath="$PROJECT_DIR$/lib/collections/messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="$PROJECT_DIR$/lib/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/style.css" afterPath="$PROJECT_DIR$/client/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
-    </list>
+    <list default="true" id="f4bf5192-3b6e-4c2d-bbb1-f06f3dc244e9" name="Default" comment="" />
     <ignored path="Campfyre.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
