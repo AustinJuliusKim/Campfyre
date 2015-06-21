@@ -9,17 +9,16 @@ Template.chat.events({
         e.preventDefault();
 
         var inputElement = t.find('#input-box');
-        var author = Meteor.user();
+        var author = Meteor.userId();
         var content = inputElement.value;
         var context = this.name;
-        var timestamp = new Date(dateString);
+        var timestamp = new Date.now();
 
         //clear inputbox
         inputElement.value = '';
 
         var msg = {
-            author: author.username,
-            authorId: author._id,
+            author: author,
             context: context,
             content: content,
             timestamp: timestamp
