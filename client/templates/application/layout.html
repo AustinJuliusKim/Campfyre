@@ -1,7 +1,12 @@
 <template name="layout">
-	<!--{{> header}}-->
-	<!--{{> errors}}-->
-		<div id="main">
-			{{> yield}}
-		</div>
+    <div class="vertical-flex" id="main">
+        {{>header}}
+
+        {{#if currentUser}}
+            {{>chat}}
+        {{else}}
+            {{>welcome}}
+        {{/if}}
+    </div>
 </template>
+

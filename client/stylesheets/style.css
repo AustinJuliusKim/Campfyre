@@ -8,18 +8,177 @@
     box-sizing: border-box;
 }
 
+/*fonts*/
+@font-face {
+    font-family: ProFontWindows;
+    src: url(/fonts/ProFontWindows.ttf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Michroma;
+    src: url(/fonts/Michroma.ttf);
+}
+
+/*universal*/
+* {
+    font-family: OpenSans, sans-serif;
+    transition: all 300ms ease-out;
+}
+
+.center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-flex {
+    display: flex;
+    flex-flow: column;
+    -webkit-flex-flow: column;
+}
+
+.horizontal-flex {
+    display: flex;
+    flex-flow: row;
+    -webkit-flex-flow: row;
+}
+
+.screen-container {
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+/*main*/
+#main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/*header*/
+nav {
+    flex: 0 0 50px;
+    background-color: #8C4646;
+    position: relative;
+}
+
+a#logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -93px;
+    width: 187px;
+    height: 42px;
+
+    font-family: Michroma;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+#logo-span {
+    color: #F2E394;
+}
+
+a#logo:hover {
+    text-decoration: none;
+}
+
 /*welcome-page*/
 #welcome-bg {
     background: url(http://i.imgur.com/jUFg7jn.jpg) no-repeat center center fixed;
-    background-color: #464646;
+    background-color: #1E5394;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
+    position: fixed;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    position:fixed;
     top: 0;
     left: 0;
+}
+
+#login-form, #signup-form {
+    margin-top: 200px;
+    min-width: 300px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#login-form h1, #signup-form h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#login-form #login-username, #login-form button[type="submit"],
+#signup-form #signup-username, #signup-form button[type="submit"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -1px;
+}
+
+#login-form #login-password, #login-form #signup-button,
+#signup-form #signup-password, #signup-form #back-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#login-form button[type="submit"], #login-form #signup-button,
+#signup-form button[type="submit"], #signup-form #back-button {
+    width: 100%;
+}
+
+/*chat*/
+#chat {
+    flex: auto;
+}
+
+#left-panel, #right-panel {
+    flex: 0 0 19%;
+    background-color: #4E555D;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#middle-panel {
+    flex: 0 1 62%;
+    background-color: #EDF5F8;
+}
+
+#middle-panel #display {
+    flex: 1 1 auto;
+    padding: 20px 20px 80px 20px;
+}
+
+#middle-panel #input-panel {
+    flex: 0 0 80px;
+    padding: 20px;
+}
+
+#middle-panel #input-box {
+    border: 2px solid rgba(60, 60, 60, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+}
+
+/*left-panel*/
+#left-panel #groups-panel, #left-panel #temp-panel {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+
+    background-color: #4E555D;
+    border: 1px solid #525C65;
+    border-radius: 4px;
 }
