@@ -15,11 +15,15 @@ Template.chat.events({
         //clear inputbox
         inputElement.value = '';
 
+        //save message in session
+        Session.set(contextId, content);
+
         var msg = {
             context: context.name,
             contextId: context._id,
             content: content
         };
+
 
         Meteor.call('messageInsert', msg, function (error, result) {
             if (error) {
@@ -27,4 +31,8 @@ Template.chat.events({
             }
         })
     }
+});
+
+Template.chat.events({
+
 });
