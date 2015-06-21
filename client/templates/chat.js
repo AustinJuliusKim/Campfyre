@@ -9,23 +9,22 @@ Template.chat.events({
         e.preventDefault();
 
         var inputElement = t.find('#input-box');
-        var author = Meteor.user();
         var content = inputElement.value;
-        var context = this.name;
-        var timestamp = new Date();
+        var context = this;
 
         //clear inputbox
         inputElement.value = '';
 
         var msg = {
-            author: author.username,
-            authorId: author._id,
-            context: context,
+            context: context.name,
             contextId: context._id,
-            content: content,
-            timestamp: timestamp
+            content: content
         };
 
-        Messages.insert(msg);
+        Meteor.call('messageInsert', msg, function (error, result) {
+            if (error) {
+                console.log(error.reason)
+            }
+        })
     }
 });
