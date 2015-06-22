@@ -16,6 +16,12 @@
                 <input type="text" id="input-box"/>
             </form>
         </div>
-        <div id="right-panel">social</div>
+        <div id="right-panel">
+            <div id="users-panel">
+                {{#each users}}
+                    {{> userItem}}
+                {{/each}}
+            </div>
+        </div>
     </div>
 </template>

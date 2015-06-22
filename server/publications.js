@@ -5,3 +5,7 @@ Meteor.publish('groups', function () {
 Meteor.publish('messages', function () {
     return Messages.find();
 });
+
+Meteor.publish('allUsers', function () {
+    return Meteor.users.find();
+});

@@ -1,6 +1,9 @@
 Template.chat.helpers({
     groups: function () {
         return Groups.find();
+    },
+    users: function () {
+        return Meteor.users.find();
     }
 });
 
