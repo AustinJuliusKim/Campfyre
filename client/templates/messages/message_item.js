@@ -1,3 +1,5 @@
 Template.messageItem.helpers({
-    content: this.content
+    content: this.content,
+    author: this.author,
+    timestamp: this.timestamp
 });
