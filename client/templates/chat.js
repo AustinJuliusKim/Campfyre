@@ -12,11 +12,10 @@ Template.chat.events({
         var content = inputElement.value;
         var context = this;
 
+        console.log(context);
+
         //clear inputbox
         inputElement.value = '';
-
-        //save message in session
-        //Session.set(contextId, content);
 
         var msg = {
             context: context.name,
@@ -31,8 +30,4 @@ Template.chat.events({
             }
         })
     }
-});
-
-Template.chat.events({
-
 });
