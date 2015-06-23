@@ -2,10 +2,17 @@ Meteor.publish('groups', function () {
     return Groups.find();
 });
 
-Meteor.publish('messages', function () {
-    return Messages.find();
+Meteor.publish('publicMessages', function (id) {
+    check(id, String);
+    return Messages.find({private: false, contextId: id});
 });
 
-Meteor.publish('allUsers', function () {
+//add addition constraints authorId: this.id?
+Meteor.publish('privateMessages', function (id) {
+    check(id, String);
+    return Messages.find({private: true, contextId: id});
+});
+
+Meteor.publish('users', function () {
     return Meteor.users.find();
 });

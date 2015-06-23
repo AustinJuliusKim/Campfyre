@@ -2,12 +2,16 @@
     <div class="horizontal-flex" id="chat">
         <div class="vertical-flex" id="left-panel">
             <div id="groups-panel">
+                <div class="panel-heading">Groups:</div>
                 {{#each groups}}
                     {{> groupItem}}
                 {{/each}}
             </div>
-            <div id="temp-panel">temp panel</div>
+            <div id="my-groups-panel">
+                <div class="panel-heading">My Groups:</div>
+            </div>
         </div>
+
         <div class="vertical-flex" id="middle-panel">
             <div id="display">
                 {{>yield}}
@@ -16,11 +20,17 @@
                 <input type="text" id="input-box"/>
             </form>
         </div>
-        <div id="right-panel">
+
+        <div class="vertical-flex" id="right-panel">
             <div id="users-panel">
+                <div class="panel-heading">Users:</div>
                 {{#each users}}
                     {{> userItem}}
                 {{/each}}
+            </div>
+
+            <div id="friends-panel">
+                <div class="panel-heading">Friends:</div>
             </div>
         </div>
     </div>

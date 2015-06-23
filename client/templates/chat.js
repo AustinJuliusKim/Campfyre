@@ -23,9 +23,11 @@ Template.chat.events({
         var msg = {
             context: context.name || context.username,
             contextId: context._id,
-            content: content
+            content: content,
+            private: assignPrivacy()
         };
 
+        console.log(msg);
 
         Meteor.call('messageInsert', msg, function (error, result) {
             if (error) {
@@ -34,3 +36,11 @@ Template.chat.events({
         })
     }
 });
+
+function assignPrivacy() {
+    var route = Router.current().url;
+    console.log(route);
+    var regex = new RegExp("/private/");
+    var isPrivate = route.match(regex) == '/private/';
+    return isPrivate;
+}

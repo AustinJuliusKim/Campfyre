@@ -1,3 +1,6 @@
-<Template name="userPage">
+<Template name="privatePage">
     @{{name}}
+    {{#each messages}}
+        {{>messageItem}}
+    {{/each}}
 </Template>
