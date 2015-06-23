@@ -1,9 +1,10 @@
-Template.publicPage.helpers({
+Template.privatePage.helpers({
     name: function () {
-        return this.name;
+        return this.username
     },
 
     messages: function () {
         return Messages.find();
     }
 });
+

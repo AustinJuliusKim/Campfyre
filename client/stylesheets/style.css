@@ -48,12 +48,6 @@
     -webkit-flex-flow: row;
 }
 
-.screen-container {
-    width: 100vw;
-    top: 0;
-    left: 0;
-}
-
 /*main*/
 #main {
     width: 100vw;
@@ -172,16 +166,20 @@ a#logo:hover {
     width: 100%;
 }
 
-/*left-panel*/
-#left-panel #groups-panel, #left-panel #temp-panel {
-    flex: 1;
+/*left&right panel layout*/
+#left-panel #groups-panel, #left-panel #my-groups-panel,
+#right-panel #users-panel, #right-panel #friends-panel {
+    flex: 1 1 9001px;
     margin: 10px;
     padding: 10px;
 
     background-color: #4E555D;
     border: 1px solid #525C65;
     border-radius: 4px;
+
+    overflow-y: auto;
 }
+
 
 /*message-item*/
 .message-item {

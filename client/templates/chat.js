@@ -1,6 +1,9 @@
 Template.chat.helpers({
     groups: function () {
         return Groups.find();
+    },
+    users: function () {
+        return Meteor.users.find();
     }
 });
 
@@ -12,18 +15,18 @@ Template.chat.events({
         var content = inputElement.value;
         var context = this;
 
+        console.log(context);
+
         //clear inputbox
         inputElement.value = '';
-
-        //save message in session
-        //Session.set(contextId, content);
-
         var msg = {
-            context: context.name,
+            context: context.name || context.username,
             contextId: context._id,
-            content: content
+            content: content,
+            private: assignPrivacy()
         };
 
+        console.log(msg);
 
         Meteor.call('messageInsert', msg, function (error, result) {
             if (error) {
@@ -33,6 +36,10 @@ Template.chat.events({
     }
 });
 
-Template.chat.events({
-
-});
+function assignPrivacy() {
+    var route = Router.current().url;
+    console.log(route);
+    var regex = new RegExp("/private/");
+    var isPrivate = route.match(regex) == '/private/';
+    return isPrivate;
+}
