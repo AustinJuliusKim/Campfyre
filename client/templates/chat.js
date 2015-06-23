@@ -19,7 +19,6 @@ Template.chat.events({
 
         //clear inputbox
         inputElement.value = '';
-
         var msg = {
             context: context.name || context.username,
             contextId: context._id,
