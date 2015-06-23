@@ -7,12 +7,16 @@ Meteor.publish('publicMessages', function (id) {
     return Messages.find({private: false, contextId: id});
 });
 
-//add addition constraints authorId: this.id?
-Meteor.publish('privateMessages', function (id) {
+Meteor.publish("privateMessages1", function (id) {
     check(id, String);
-    return Messages.find({private: true, contextId: id});
+    return Messages.find({private: true, contextId: this.userId, authorId: id});
+});
+
+Meteor.publish("privateMessages2", function (id) {
+    check(id, String);
+    return Messages.find({private: true, contextId: id, authorId: this.userId});
 });
 
 Meteor.publish('users', function () {
-    return Meteor.users.find();
+    return Meteor.users.find({}, {username: 1});
 });
