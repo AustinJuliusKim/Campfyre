@@ -21,7 +21,7 @@ Template.chat.events({
         inputElement.value = '';
 
         var msg = {
-            context: context.name,
+            context: context.name || context.username,
             contextId: context._id,
             content: content
         };

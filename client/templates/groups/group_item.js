@@ -3,6 +3,3 @@ Template.groupItem.helpers({
         return this.name;
     }
 });
-
-Template.groupItem.events({
-});
