@@ -7,16 +7,20 @@ Meteor.publish('publicMessages', function (id) {
     return Messages.find({private: false, contextId: id});
 });
 
-Meteor.publish("privateMessages1", function (id) {
-    check(id, String);
-    return Messages.find({private: true, contextId: this.userId, authorId: id});
+Meteor.publish("privateMessages", function (id) {
+    check(id, Strinsg);
+    var selector1 = {private: true, contextId: this.userId, authorId: id};
+    var selector2 = {private: true, contextId: id, authorId: this.userId};
+    return Messages.find({
+        $or: [selector1, selector2]
+    })
 });
 
-Meteor.publish("privateMessages2", function (id) {
-    check(id, String);
-    return Messages.find({private: true, contextId: id, authorId: this.userId});
-});
-
+//users
 Meteor.publish('users', function () {
     return Meteor.users.find({}, {username: 1});
+});
+
+Meteor.publish('userPresence', function () {
+
 });
