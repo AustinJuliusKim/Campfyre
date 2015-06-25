@@ -182,6 +182,7 @@ a#logo:hover {
     padding: 20px;
     font-size: 20px;
     background-color: transparent;
+    color: #F2E394;
 }
 
 .panel-heading {
@@ -294,6 +295,7 @@ a#logo:hover {
 .message-options i {
     font-size: 18px;
     margin-left: 7px;
+    color: #F2E394;
 }
 
 .message-options .fa-cogs,
@@ -302,7 +304,7 @@ a#logo:hover {
     top: 0;
     right: 0;
 
-    color: black;
+    color: #F2E394;;
 }
 
 .message-options-disabled .fa-cogs {
@@ -339,8 +341,9 @@ a#logo:hover {
 
 .message-content {
     line-height: 170%;
-    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     font-size: 14px;
+    color: rgb(240, 240, 240);
 }
 
 .message-content-edit {

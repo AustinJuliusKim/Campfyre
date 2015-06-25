@@ -74,7 +74,7 @@ Template.messageItem.events({
 
         t.find('.message-content').style.display = 'none';
         t.find('.message-content-edit').style.opacity = '1';
-        t.find('.message-content-edit').style.height = '106px';
+        t.find('.message-content-edit').style.height = '122px';
     },
 
     'click .cancel-edit': function (e, t) {
