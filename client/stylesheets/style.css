@@ -191,13 +191,23 @@ a#logo:hover {
 }
 
 /*message-item*/
-.message-item {
-    margin: 0 0 20px 0;
-    padding: 10px;
-    width: 100%;
+.message-avatar, .message-body {
     border-radius: 4px;
     background-color: white;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.message-avatar {
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.message-body {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    width: 100%;
 }
 
 .message-author {

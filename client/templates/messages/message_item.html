@@ -1,11 +1,15 @@
 <template name="messageItem">
-    <div class="message-item">
-        <div class="message-info">
-            <span class="message-author">{{author}}</span>
-            <span class="message-timestamp">{{timestamp}}</span>
-        </div>
-        <div class="message-content">
-            {{content}}
+    <div class="message-item horizontal-flex">
+        <img src="{{avatar}}" alt="avatar" class="message-avatar"/>
+
+        <div class="message-body">
+            <div class="message-info">
+                <span class="message-author">{{author}}</span>
+                <span class="message-timestamp">{{timestamp}}</span>
+            </div>
+            <div class="message-content">
+                {{content}}{{avatar}}
+            </div>
         </div>
     </div>
 </template>
