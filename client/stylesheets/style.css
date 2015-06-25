@@ -69,7 +69,7 @@
 /*header*/
 nav {
     flex: 0 0 70px;
-    background-color: #D96459;
+    background-color: #348c96;
     /*background-color: #8C4646;*/
     position: relative;
 }
@@ -150,14 +150,16 @@ a#logo:hover {
 
 #left-panel, #right-panel {
     flex: 0 0 19%;
-    background-color: #4E555D;
+    background-color: #e4f0f2;
     padding: 10px;
     font-size: 20px;
 }
 
 #middle-panel {
     flex: 0 1 62%;
-    background-color: #EDF5F8;
+    background-color: #edf8f5;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
 }
 
 #middle-panel .context-heading {
@@ -166,6 +168,16 @@ a#logo:hover {
     padding: 20px;
     font-size: 20px;
     background-color: transparent;
+}
+
+.panel-heading {
+    background-color: #e1edea;
+    padding: 10px 10px 8px 10px;
+}
+
+.panel-content {
+    border-top: 1px solid silver;
+    font-size: 16px;
 }
 
 #middle-panel #display {
@@ -192,14 +204,32 @@ a#logo:hover {
 #right-panel #users-panel, #right-panel #friends-panel {
     flex: 1 1 9001px;
     margin: 10px;
-    padding: 10px;
 
-    background-color: #4E555D;
-    border: 1px solid #525C65;
+    background-color: #edf8f5;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.group-item, .user-item {
+    padding: 5px 10px;
+
+}
+.group-item a, .user-item a{
+    color: #358d97;
+}
+
+.group-item:hover, .user-item:hover,
+.group-item:hover a, .user-item:hover a {
+    background-color: #358d97;
+    color: #edf8f5;
+    text-decoration: none;
+}
+
+.group-item:first-child, .user-item:first-child {
+    padding-top: 10px;
 }
 
 /*message-item*/
@@ -218,8 +248,12 @@ a#logo:hover {
 
 .message-body {
     margin: 0 0 20px 0;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
+}
+
+.message-info {
+    margin-bottom: 10px;
 }
 
 .message-options,
@@ -249,7 +283,7 @@ a#logo:hover {
 
 .message-options .fa-trash-o:hover,
 .message-options .fa-pencil:hover {
-    color: #D96459;
+    color: #F2E394;
 }
 
 .message-options .message-options-clickable {
@@ -270,6 +304,11 @@ a#logo:hover {
 
 .message-timestamp {
     color: #b3c1c6;
+    margin-left: 10px;
+}
+
+.message-content {
+    line-height: 170%;
 }
 
 .message-content-edit {
@@ -296,12 +335,12 @@ a#logo:hover {
 }
 
 /*notifications*/
-.user-item .fa-bell{
+.user-item .fa-bell {
     color: white;
 }
 
-.user-item .fa-bell.dark{
-    color: #525C65;
+.user-item .fa-bell.dark {
+    color: rgba(0, 0, 0, 0.07);
 }
 
 /*custom scrollbar*/

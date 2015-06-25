@@ -3,12 +3,16 @@
         <div class="vertical-flex" id="left-panel">
             <div id="groups-panel">
                 <div class="panel-heading">Groups:</div>
-                {{#each groups}}
-                    {{> groupItem}}
-                {{/each}}
+                <div class="panel-content">
+                    {{#each groups}}
+                        {{> groupItem}}
+                    {{/each}}
+                </div>
             </div>
             <div id="my-groups-panel">
                 <div class="panel-heading">My Groups:</div>
+                <div class="panel-content">
+                </div>
             </div>
         </div>
 
@@ -25,13 +29,17 @@
         <div class="vertical-flex" id="right-panel">
             <div id="users-panel">
                 <div class="panel-heading">Users:</div>
-                {{#each users}}
-                    {{> userItem}}
-                {{/each}}
+                <div class="panel-content">
+                    {{#each users}}
+                        {{> userItem}}
+                    {{/each}}
+                </div>
             </div>
 
             <div id="friends-panel">
                 <div class="panel-heading">Friends:</div>
+                <div class="panel-content">
+                </div>
             </div>
         </div>
     </div>
