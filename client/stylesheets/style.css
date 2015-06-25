@@ -223,7 +223,7 @@ a#logo:hover {
     border-radius: 4px;
     height: 40px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     padding-left: 20px;
     flex: 1 1 auto;
 }
