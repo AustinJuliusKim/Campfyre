@@ -1,6 +1,8 @@
 <Template name="privatePage">
-    @{{name}}
-    {{#each messages}}
-        {{>messageItem}}
-    {{/each}}
+    <div class="context-heading">@{{name}}</div>
+    <div class="messages-container">
+        {{#each messages}}
+            {{>messageItem}}
+        {{/each}}
+    </div>
 </Template>

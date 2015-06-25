@@ -4,6 +4,11 @@ Template.chat.helpers({
     },
     users: function () {
         return Meteor.users.find();
+    },
+    heading: function () {
+        var id = Session.get('currentContextId');
+        var currentContext = Groups.findOne(id) || Meteor.users.findOne(id);
+        return currentContext.name || currentContext.username;
     }
 });
 

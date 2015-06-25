@@ -149,9 +149,18 @@ a#logo:hover {
     background-color: #EDF5F8;
 }
 
+#middle-panel .context-heading {
+    flex: 0 0 70px;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
 #middle-panel #display {
     flex: 1 1 auto;
-    padding: 20px 20px 80px 20px;
+    padding: 0 20px;
+    overflow-y: auto;
 }
 
 #middle-panel #input-panel {
@@ -178,8 +187,8 @@ a#logo:hover {
     border-radius: 4px;
 
     overflow-y: auto;
+    overflow-x: hidden;
 }
-
 
 /*message-item*/
 .message-item {

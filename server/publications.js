@@ -8,7 +8,7 @@ Meteor.publish('publicMessages', function (id) {
 });
 
 Meteor.publish("privateMessages", function (id) {
-    check(id, Strinsg);
+    check(id, String);
     var selector1 = {private: true, contextId: this.userId, authorId: id};
     var selector2 = {private: true, contextId: id, authorId: this.userId};
     return Messages.find({
