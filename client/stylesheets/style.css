@@ -426,3 +426,7 @@ a#logo:hover {
 ::-webkit-scrollbar-thumb:window-inactive {
     background: transparent;
 }
+
+#main {
+    transition: background 300ms ease-out;
+}
