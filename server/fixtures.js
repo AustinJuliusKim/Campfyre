@@ -12,16 +12,22 @@
 
 //seed dummy users
     if (!Meteor.users.find().count()) {
+        var userId;
         for (var i = 1; i <= 5; i++) {
-            Meteor.users.insert({
+            userId = Meteor.users.insert({
                 username: 'dummyUser0' + i,
-                avatar: assignRandomAvatar(),
                 "services": {
                     "password": {
                         "bcrypt": "$2a$10$VUBLmUbT9M2XfCDSMFMIgOfJYOCkWTgKEejUMWkcrJ6o6wBiCcAwW"
                     }
                 },
                 "profile": {}
+            });
+
+            Profiles.insert({
+                avatar: assignRandomAvatar(),
+                user: 'dummyUser0' + i,
+                userId: userId
             });
         }
     }

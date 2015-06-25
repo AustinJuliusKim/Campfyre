@@ -4,9 +4,11 @@
             e.preventDefault();
             Accounts.createUser({
                 username: t.find('#signup-username').value,
-                password: t.find('#signup-password').value,
-                //@@@ refactor to global helper. look into meteor template scopes
-                avatar: function () {
+                password: t.find('#signup-password').value
+            }, function (error) {
+                if (error) {
+                    console.log("Account not created. Reason: " + error.reason);
+                } else {
                     var avatars = [
                         'http://i.imgur.com/tLsEqDo.png',
                         'http://i.imgur.com/6G0BDmB.png',
@@ -14,11 +16,15 @@
                         'http://i.imgur.com/ENQREiE.png'
                     ];
                     var randomNum = Math.floor(Math.random() * 4);
-                    return avatars[randomNum];
-                }
-            }, function (error) {
-                if (error) {
-                    console.log("Account not created. Reason: " + error.reason);
+                    var userId = Meteor.userId();
+                    var profile = {
+                        avatar: avatars[randomNum]
+                    };
+                    Meteor.call('profileInsert', profile, function (error, result) {
+                        if (error) {
+                            console.log(error.reason)
+                        }
+                    });
                 }
             });
         },

@@ -17,10 +17,12 @@ Meteor.publish("privateMessages", function (id) {
 });
 
 //users
-Meteor.publish('users', function () {
-    return Meteor.users.find({}, {username: 1});
+Meteor.publish('profiles', function () {
+    return Profiles.find();
 });
-
+Meteor.publish('allUsers', function () {
+    return Meteor.users.find();
+});
 Meteor.publish('userPresence', function () {
 
 });
