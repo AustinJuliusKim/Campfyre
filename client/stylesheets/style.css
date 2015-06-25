@@ -27,7 +27,7 @@
 /*universal*/
 * {
     font-family: OpenSans, sans-serif;
-    transition: all 300ms ease-out;
+    transition: all 200ms ease-out;
 }
 
 .center-child {
@@ -57,16 +57,27 @@
     left: 0;
 }
 
+/*modal*/
+.modal-dialogue {
+    position: absolute;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+}
+
 /*header*/
 nav {
-    flex: 0 0 50px;
-    background-color: #8C4646;
+    flex: 0 0 70px;
+    background-color: #D96459;
+    /*background-color: #8C4646;*/
     position: relative;
 }
 
 a#logo {
     position: absolute;
     left: 50%;
+    margin-top: 8px;
     margin-left: -93px;
     width: 187px;
     height: 42px;
@@ -161,6 +172,7 @@ a#logo:hover {
     flex: 1 1 auto;
     padding: 0 20px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #middle-panel #input-panel {
@@ -198,7 +210,7 @@ a#logo:hover {
 }
 
 .message-avatar {
-    width: 65px;
+    min-width: 65px;
     height: 65px;
     background-color: white;
     margin-right: 10px;
@@ -210,6 +222,47 @@ a#logo:hover {
     width: 100%;
 }
 
+.message-options,
+.message-options-disabled {
+    position: relative;
+    float: right;
+}
+
+.message-options i {
+    font-size: 18px;
+    margin-left: 7px;
+}
+
+.message-options .fa-cogs,
+.message-options-disabled .fa-cogs {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: black;
+}
+
+.message-options-disabled .fa-cogs {
+    font-size: 18px;
+    color: #b3c1c6;
+}
+
+.message-options .fa-trash-o:hover,
+.message-options .fa-pencil:hover {
+    color: #D96459;
+}
+
+.message-options .message-options-clickable {
+    transition: all 200ms ease-out;
+    display: inline-block;
+    overflow: hidden;
+    max-height: 18px;
+
+    /*slide effect*/
+    margin-right: -40px;
+    opacity: 0;
+}
+
 .message-author {
     font-weight: 900;
     font-size: 18px;
@@ -217,6 +270,38 @@ a#logo:hover {
 
 .message-timestamp {
     color: #b3c1c6;
+}
+
+.message-content-edit {
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    height: 0;
+}
+
+.message-content-edit textarea {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.message-content-edit .edit-tip {
+    position: absolute;
+    bottom: 10px;
+}
+
+.message-content-edit .confirm-edit,
+.message-content-edit .cancel-edit {
+    float: right;
+    margin: 5px 0 0 10px;
+}
+
+/*notifications*/
+.user-item .fa-bell{
+    color: white;
+}
+
+.user-item .fa-bell.dark{
+    color: #525C65;
 }
 
 /*custom scrollbar*/

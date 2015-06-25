@@ -20,9 +20,15 @@ Meteor.publish("privateMessages", function (id) {
 Meteor.publish('profiles', function () {
     return Profiles.find();
 });
+
 Meteor.publish('allUsers', function () {
     return Meteor.users.find();
 });
-Meteor.publish('userPresence', function () {
+//
+//Meteor.publish('userPresence', function () {
+//    return Presences.find();
+//});
 
+Meteor.publish('notifications', function () {
+    return Notifications.find();
 });

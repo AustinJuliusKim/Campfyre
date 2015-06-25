@@ -6,9 +6,30 @@
             <div class="message-info">
                 <span class="message-author">{{author}}</span>
                 <span class="message-timestamp">{{timestamp}}</span>
+
+                {{#if ownMsg}}
+                    <div class="message-options">
+                        <i class="fa fa-cogs"></i>
+
+                        <div class="message-options-clickable">
+                            <i class="fa fa-pencil"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </div>
+                {{else}}
+                    <div class="message-options-disabled">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                {{/if}}
             </div>
             <div class="message-content">
                 {{content}}
+            </div>
+            <div class="message-content-edit">
+                <textarea class="edit-area" id="" cols="30" rows="3">{{content}}</textarea>
+                <span class="edit-tip"><i class="fa fa-keyboard-o"></i> Shift+Enter to submit</span>
+                <button class="confirm-edit btn btn-success">Submit</button>
+                <button class="cancel-edit btn btn-danger">Cancel</button>
             </div>
         </div>
     </div>
