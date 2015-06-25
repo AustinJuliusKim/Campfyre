@@ -20,8 +20,6 @@ Template.chat.events({
         var content = inputElement.value;
         var context = this;
 
-        console.log(context);
-
         //clear inputbox
         inputElement.value = '';
         var msg = {
@@ -31,11 +29,13 @@ Template.chat.events({
             private: assignPrivacy()
         };
 
-        console.log(msg);
 
         Meteor.call('messageInsert', msg, function (error, result) {
             if (error) {
                 console.log(error.reason)
+            } else {
+                //change to Autorun later
+                $('#display').scrollTop($('#display')[0].scrollHeight);
             }
         })
     }
