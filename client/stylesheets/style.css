@@ -251,7 +251,6 @@ a#logo:hover {
     color: rgb(158, 169, 184);
 }
 
-
 .group-item:hover, .user-item:hover,
 .group-item:hover a, .user-item:hover a {
     background-color: #358d97;
@@ -376,19 +375,21 @@ a#logo:hover {
 }
 
 .message-content-edit .cancel-edit {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.message-content-edit .cancel-edit:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.message-content-edit .cancel-edit:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #333;
+}
+
 .message-content-edit .confirm-edit {
-    background-color: rgba(242, 227, 148, 0.8);
+    background-color: rgba(242, 227, 148, 0.5);
 }
 
 .message-content-edit .confirm-edit:hover {
     background-color: rgba(242, 227, 148, 1);
+    color: black;
 }
 
 /*notifications*/
