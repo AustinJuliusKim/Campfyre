@@ -1,5 +1,5 @@
 Template.logoutForm.events({
-    'submit #logout-form': function (e, t) {
+    'click #logout-btn': function (e, t) {
         e.preventDefault();
 
         Meteor.logout(function (error) {

@@ -99,6 +99,18 @@ a#logo:hover {
     text-decoration: none;
 }
 
+#logout-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    position: fixed;
+    top: 19px;
+    right: 40px;
+}
+
+#logout-btn:hover {
+    background-color: rgb(195, 55, 55);
+}
+
 /*welcome-page*/
 #welcome-bg {
     background: url(http://i.imgur.com/jUFg7jn.jpg) no-repeat center center fixed;
@@ -175,6 +187,7 @@ a#logo:hover {
 .panel-heading {
     background-color: rgba(211, 228, 228, 0.3);
     padding: 10px 10px 8px 10px;
+    color: white;
 }
 
 .panel-content {
@@ -340,6 +353,10 @@ a#logo:hover {
 .message-content-edit textarea {
     width: 100%;
     border-radius: 4px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    padding: 10px;
 }
 
 .message-content-edit .edit-tip {
@@ -351,6 +368,23 @@ a#logo:hover {
 .message-content-edit .cancel-edit {
     float: right;
     margin: 5px 0 0 10px;
+    border: none;
+}
+
+.message-content-edit .cancel-edit {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.message-content-edit .cancel-edit:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.message-content-edit .confirm-edit {
+    background-color: rgba(242, 227, 148, 0.8);
+}
+
+.message-content-edit .confirm-edit:hover {
+    background-color: rgba(242, 227, 148, 1);
 }
 
 /*notifications*/
