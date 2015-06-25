@@ -251,6 +251,7 @@ a#logo:hover {
     color: rgb(158, 169, 184);
 }
 
+
 .group-item:hover, .user-item:hover,
 .group-item:hover a, .user-item:hover a {
     background-color: #358d97;
